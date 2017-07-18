@@ -7,9 +7,12 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:showCoverage": "jest --coverage && open coverage/lcov-report/index.html",
+    "test:coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
+    "coveralls": "^2.13.1",
     "jest-cli": "^20.0.4"
   },
   "dependencies": {
